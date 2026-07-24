@@ -1712,7 +1712,7 @@ function MpvCorePlayerContent(props: MpvCorePlayerContentProps) {
                         className="absolute inset-0 h-full w-full"
                         fit="contain"
                         frameTransport="auto"
-                        presentationMode="auto"
+                        presentationMode="canvas"
                         lowLatency
                         overlayStyle={{ pointerEvents: "auto", zIndex: "auto" }}
                     >
