@@ -35,6 +35,7 @@ export function setupChromiumFlags() {
     app.commandLine.appendSwitch("enable-features", [
         "WebAssemblyLazyCompilation",
         "ThrottleDisplayNoneAndVisibilityHiddenCrossOriginIframes",
+        "CanvasOopRasterization",
         "UseSkiaRenderer",
         "PlatformEncryptedDolbyVision",
         "SharedArrayBuffer",
@@ -48,6 +49,9 @@ export function setupChromiumFlags() {
     app.commandLine.appendSwitch("disable-backgrounding-occluded-windows")
     app.commandLine.appendSwitch("disable-renderer-backgrounding")
     app.commandLine.appendSwitch("disable-background-media-suspend")
+
+    app.commandLine.appendSwitch("double-buffer-compositing")
+    app.commandLine.appendSwitch("disable-direct-composition-video-overlays")
 
     if (process.platform === "linux") {
         log.info("Passing --gtk-version=3 to Electron")
